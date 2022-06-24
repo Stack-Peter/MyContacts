@@ -1,20 +1,29 @@
-import { Card, Container, Header, ListContainer } from './styles'
-import arrow from '../../assets/images/icons/arrow.svg'
-import edit from '../../assets/images/icons/edit.svg'
-import trash from '../../assets/images/icons/trash.svg'
+import {
+  Card,
+  Container,
+  Header,
+  ListContainer,
+  InputSearchContainer,
+} from "./styles";
+import arrow from "../../assets/images/icons/arrow.svg";
+import edit from "../../assets/images/icons/edit.svg";
+import trash from "../../assets/images/icons/trash.svg";
 
-const ContactsList = () => {
+export default function Home() {
   return (
     <Container>
+      <InputSearchContainer>
+        <input type="text" placeholder="Pesquisar contato..." />
+      </InputSearchContainer>
       <Header>
         <strong>3 Contatos</strong>
-        <a href='/'>Novo Contato</a>
+        <a href="/">Novo Contato</a>
       </Header>
       <ListContainer>
         <header>
           <button type="button">
             <span>Nome</span>
-            <img src={arrow} alt="Arrow"/>
+            <img src={arrow} alt="Arrow" />
           </button>
         </header>
 
@@ -30,7 +39,7 @@ const ContactsList = () => {
 
           <div className="actions">
             <a href="/">
-              <img src={edit} alt="Edit"/>
+              <img src={edit} alt="Edit" />
             </a>
             <button type="button">
               <img src={trash} alt="Delete" />
@@ -49,7 +58,7 @@ const ContactsList = () => {
 
           <div className="actions">
             <a href="/">
-              <img src={edit} alt="Edit"/>
+              <img src={edit} alt="Edit" />
             </a>
             <button type="button">
               <img src={trash} alt="Delete" />
@@ -68,7 +77,7 @@ const ContactsList = () => {
 
           <div className="actions">
             <a href="/">
-              <img src={edit} alt="Edit"/>
+              <img src={edit} alt="Edit" />
             </a>
             <button type="button">
               <img src={trash} alt="Delete" />
@@ -77,7 +86,5 @@ const ContactsList = () => {
         </Card>
       </ListContainer>
     </Container>
-  )
+  );
 }
-
-export default ContactsList
