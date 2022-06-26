@@ -5,6 +5,8 @@ import {
   ListContainer,
   InputSearchContainer,
 } from "./styles";
+
+import { Link } from 'react-router-dom'
 import arrow from "../../assets/images/icons/arrow.svg";
 import edit from "../../assets/images/icons/edit.svg";
 import trash from "../../assets/images/icons/trash.svg";
@@ -17,7 +19,7 @@ export default function Home() {
       </InputSearchContainer>
       <Header>
         <strong>3 Contatos</strong>
-        <a href="/">Novo Contato</a>
+        <Link to="/new">Novo Contato</Link>
       </Header>
       <ListContainer>
         <header>
@@ -38,47 +40,9 @@ export default function Home() {
           </div>
 
           <div className="actions">
-            <a href="/">
+            <Link to="/edit/123">
               <img src={edit} alt="Edit" />
-            </a>
-            <button type="button">
-              <img src={trash} alt="Delete" />
-            </button>
-          </div>
-        </Card>
-        <Card>
-          <div className="info">
-            <div className="contact-name">
-              <strong>Pedro Marcos</strong>
-              <small>Instagram</small>
-            </div>
-            <span>pedro@devacademy.com.br</span>
-            <span>(41) 99999-9999</span>
-          </div>
-
-          <div className="actions">
-            <a href="/">
-              <img src={edit} alt="Edit" />
-            </a>
-            <button type="button">
-              <img src={trash} alt="Delete" />
-            </button>
-          </div>
-        </Card>
-        <Card>
-          <div className="info">
-            <div className="contact-name">
-              <strong>Pedro Marcos</strong>
-              <small>Instagram</small>
-            </div>
-            <span>pedro@devacademy.com.br</span>
-            <span>(41) 99999-9999</span>
-          </div>
-
-          <div className="actions">
-            <a href="/">
-              <img src={edit} alt="Edit" />
-            </a>
+            </Link>
             <button type="button">
               <img src={trash} alt="Delete" />
             </button>
