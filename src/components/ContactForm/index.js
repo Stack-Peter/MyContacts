@@ -76,8 +76,9 @@ export default function ContactForm({ buttonLabel }) {
         />
       </FromGroup>
 
-      <FromGroup error="O formato do e-mail é inválido">
+      <FromGroup error={getErrorByFieldName("email")}>
         <Input
+          error={getErrorByFieldName("email")}
           placeholder="E-mail"
           value={email}
           onChange={handleEmailChange}
