@@ -56,3 +56,17 @@ export default function Home() {
     </Container>
   );
 }
+
+fetch('http://localhost:3001')
+  .then((response) => {
+    console.log('response', response)
+  })
+  .catch((error) => {
+    console.log('erro', error)
+  })
+
+// SOP -> Same Origin Policy -> Política de mesma origem
+// Origem: protocolo://domínio:porta
+
+// Saída: http://localhost:3000
+// Destino: http://localhost:3001 <- fere o SOP por ter diferença da saída ou vice versa
