@@ -71,3 +71,6 @@ fetch('http://localhost:3001/contacts')
 
 // Saída: http://localhost:3000
 // Destino: http://localhost:3001 <- fere o SOP por ter diferença da saída ou vice versa
+
+// Preflight -> Pré-voô
+// OPTIONS http://localhost:3001/contacts
