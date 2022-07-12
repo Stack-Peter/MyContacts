@@ -59,10 +59,10 @@ export default function Home() {
 
 fetch('http://localhost:3001/contacts')
   .then((response) => {
-    console.log('response', response.json())
+    console.log(response.json())
   })
   .catch((error) => {
-    console.log('erro', error)
+    console.tab(error)
   })
 
 // SOP -> Same Origin Policy -> Política de mesma origem
