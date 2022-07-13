@@ -58,8 +58,9 @@ export default function Home() {
 }
 
 fetch('http://localhost:3001/contacts')
-  .then((response) => {
-    console.log(response.json())
+  .then(async (response) => {
+    const json = await response.json();
+    console.log(json)
   })
   .catch((error) => {
     console.tab(error)
